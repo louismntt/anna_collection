@@ -1,5 +1,4 @@
 
-
 const playFirstVideo = function() {
     document.getElementById('section-video1').scrollIntoView();
     const video1 = document.getElementById('video1');
@@ -11,6 +10,8 @@ const playFirstVideo = function() {
 const video1 = document.getElementById('video1');
 video1.addEventListener('ended', function() {
     this.webkitExitFullscreen();
+    this.exitFullscreen();
+    this.msExitFullscreen();
     document.getElementById('section-video2').scrollIntoView();
     const video2 = document.getElementById('video2');
     setTimeout(function(){
@@ -27,6 +28,8 @@ video1.addEventListener('ended', function() {
 const video2 = document.getElementById('video2');
 video2.addEventListener('ended', function() {
     this.webkitExitFullscreen();
+    this.exitFullscreen();
+    this.msExitFullscreen();
     document.getElementById('section-video3').scrollIntoView();
     const video3 = document.getElementById('video3');
     setTimeout(function(){
@@ -43,11 +46,13 @@ video2.addEventListener('ended', function() {
 const video3 = document.getElementById('video3');
 video3.addEventListener('ended', function() {
     this.webkitExitFullscreen();
+    this.exitFullscreen();
+    this.msExitFullscreen();
     document.getElementById('section-video4').scrollIntoView();
     const video4 = document.getElementById('video4');
     setTimeout(function(){
         video4.play();
-    video4.requestFullscreen();
+        video4.requestFullscreen();
 
     }, 500);    
 
