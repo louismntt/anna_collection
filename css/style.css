@@ -1,7 +1,10 @@
 :root{
     --font:sans-serif;
-    --background:white;
-    --color:green;
+    --background:black;
+    --color:white;
+}
+* {
+    scroll-behavior: smooth;
 }
 
 body {
@@ -11,14 +14,25 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+ 
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem;
+    height: 100vh;
 }
 
 h1 {
     color: var(--color);
     text-align: center;
-    width : 30rem;
+    width : 60rem;
     max-width: 80%;
-    margin-top: 5rem;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
     font-size: 3rem;
 }
 
@@ -27,7 +41,6 @@ p {
     text-align: center;
     width : 30rem;
     max-width: 80%;
-    margin: 5rem;
 }
 
 button {
@@ -38,22 +51,10 @@ button {
     padding: 0.5rem 1rem;
     font-size: 1rem;
     cursor: pointer;
-    margin: 2rem;
+
+    margin: 3rem;
 }
 
-#video {
-display: none;
-}
-
-#black-screen {
-    opacity: 0;
-    /* disable click on this div */
-    pointer-events: none;
-    background: black;
-    width: 100%;
+video {
     height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 1;
 }

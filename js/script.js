@@ -1,44 +1,33 @@
-// play video on button click, on fullscreen 
-
-const video = document.getElementById('video');
-const blackScreen = document.getElementById('black-screen');
-const turnVideoOn = () => {
-    blackScreen.style.opacity = '1';
-    video.requestFullscreen();
-    video.style.display = 'block';
-    video.play();
-}
-
-// detect if fullscreen mode is turned on or off
-
-function hideVideo() {
-    video.style.display = 'none';
-    blackScreen.style.opacity = '0';
-
-}
-
-if (document.addEventListener) {
-    document.addEventListener('fullscreenchange', exitHandler, false);
-    document.addEventListener('mozfullscreenchange', exitHandler, false);
-    document.addEventListener('MSFullscreenChange', exitHandler, false);
-    document.addEventListener('webkitfullscreenchange', exitHandler, false);
-}
-
-function exitHandler() {
-    if (document.webkitIsFullScreen === false) {
-        hideVideo();
-    video.pause();
-
+const playFirstVideo = function() {
+    document.getElementById('section-video1').scrollIntoView();
+    const video1 = document.getElementById('video1');
+    video1.play();
     }
-    else if (document.mozFullScreen === false) {
-        hideVideo();
-    video.pause();
 
-
+// detect end of video 1, scroll to section-video2 and play video2 
+const video1 = document.getElementById('video1');
+video1.addEventListener('ended', function() {
+    document.getElementById('section-video2').scrollIntoView();
+    const video2 = document.getElementById('video2');
+    video2.play();
     }
-    else if (document.msFullscreenElement === false) {
-        hideVideo();
-    video.pause();
+);
 
+// detect end of video 2, scroll to section-video3 and play video3
+const video2 = document.getElementById('video2');
+video2.addEventListener('ended', function() {
+    document.getElementById('section-video3').scrollIntoView();
+    const video3 = document.getElementById('video3');
+    video3.play();
     }
-}
+);
+
+// detect end of video 3, scroll to section-video4 and play video4
+const video3 = document.getElementById('video3');
+video3.addEventListener('ended', function() {
+    document.getElementById('section-video4').scrollIntoView();
+    const video4 = document.getElementById('video4');
+    video4.play();
+    }
+);
+

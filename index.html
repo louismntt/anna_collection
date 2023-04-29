@@ -1,25 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/style.css">
 
-    <title></title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/style.css">
 
-  </head>
-  <body>
+  <title></title>
 
-      <h1>TITRE Parce qu'on aime les titres</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst quisque sagittis purus sit amet. Gravida neque convallis a cras semper auctor neque vitae. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. Urna id volutpat lacus laoreet. Felis bibendum ut tristique et egestas quis ipsum suspendisse. Ullamcorper morbi tincidunt ornare massa. Eget gravida cum sociis natoque. Facilisis leo vel fringilla est. Posuere ac ut consequat semper viverra nam libero. Pretium nibh ipsum consequat nisl vel. Nunc consequat interdum varius sit amet mattis vulputate enim. Tellus orci ac auctor augue. Facilisis mauris sit amet massa vitae tortor condimentum lacinia.</p>
-      <button onclick="turnVideoOn()">Voir la vidéo</button>
+</head>
 
-      <div id="black-screen"></div>
+<body>
 
-      <video id="video" src="assets/IMG_3528.MOV" controls></video>
+  <section id="home">
+    <h1>TITRE Parce qu'on aime les titres</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
+      magna aliqua. Hac habitasse platea dictumst quisque sagittis purus sit amet. Gravida neque convallis a cras semper
+      auctor neque vitae. Tortor pretium viverra suspendisse potenti nullam ac tortor vitae purus. 
+      </p>
+      <button onClick="playFirstVideo()">Voir la vidéo</button>
+    <!-- create a button which makes the user scroll to section <section id="video1"> -->
+  </section>
 
-    <script type="text/javascript" src="/js/script.js">
-    </script>
-  </body>
+  <section id="section-video1">
+    <h1>TITRE</h1>
+    <video id="video1" class="video" src="assets/IMG_3528.MOV" controls></video>
+  </section>
+
+  <section id="section-video2">
+    <h1>TITRE</h1>
+    <video id="video2" class="video" src="assets/IMG_3528.MOV" controls></video>
+  </section>
+
+  <section id="section-video3">
+    <h1>TITRE</h1>
+    <video id="video3" class="video" src="assets/IMG_3528.MOV" controls></video>
+  </section>
+
+  <section id="section-video4">
+    <h1>TITRE</h1>
+    <video id="video4" class="video" src="assets/IMG_3528.MOV" controls></video>
+  </section>
+
+  <script type="text/javascript" src="/js/script.js">
+  </script>
+</body>
+
 </html>
