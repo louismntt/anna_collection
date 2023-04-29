@@ -9,9 +9,16 @@ const playFirstVideo = function() {
 // detect end of video 1, scroll to section-video2 and play video2 
 const video1 = document.getElementById('video1');
 video1.addEventListener('ended', function() {
-    this.webkitExitFullscreen();
-    this.exitFullscreen();
-    this.msExitFullscreen();
+    if (video1.exitFullscreen) {
+        video1.exitFullscreen();
+      } else if (video1.webkitExitFullscreen) {
+        /* Safari */
+        video1.webkitExitFullscreen();
+      } else if (video1.msExitFullscreen) {
+        /* IE11 */
+        video1.msExitFullscreen();
+      }
+    console.log('video1 ended');
     document.getElementById('section-video2').scrollIntoView();
     const video2 = document.getElementById('video2');
     setTimeout(function(){
