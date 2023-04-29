@@ -1,3 +1,5 @@
+
+
 const playFirstVideo = function() {
     document.getElementById('section-video1').scrollIntoView();
     const video1 = document.getElementById('video1');

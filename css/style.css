@@ -14,7 +14,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
- 
 }
 
 section {
@@ -29,8 +28,7 @@ section {
 h1 {
     color: var(--color);
     text-align: center;
-    width : 60rem;
-    max-width: 80%;
+    width: 80%;
     margin-top: 1rem;
     margin-bottom: 2rem;
     font-size: 3rem;
@@ -39,7 +37,7 @@ h1 {
 p {
     color: var(--color);
     text-align: center;
-    width : 30rem;
+    width : 80%;
     max-width: 80%;
 }
 
@@ -56,5 +54,5 @@ button {
 }
 
 video {
-    height: 100%;
+    height: 90%;
 }
