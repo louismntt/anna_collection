@@ -1,0 +1,59 @@
+:root{
+    --font:sans-serif;
+    --background:white;
+    --color:green;
+}
+
+body {
+    font-family: var(--font);
+    background: var(--background);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h1 {
+    color: var(--color);
+    text-align: center;
+    width : 30rem;
+    max-width: 80%;
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+
+p {
+    color: var(--color);
+    text-align: center;
+    width : 30rem;
+    max-width: 80%;
+    margin: 5rem;
+}
+
+button {
+    background: var(--color);
+    color: var(--background);
+    border: none;
+    border-radius: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    cursor: pointer;
+    margin: 2rem;
+}
+
+#video {
+display: none;
+}
+
+#black-screen {
+    opacity: 0;
+    /* disable click on this div */
+    pointer-events: none;
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
