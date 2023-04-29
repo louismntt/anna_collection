@@ -4,6 +4,7 @@ const playFirstVideo = function() {
     document.getElementById('section-video1').scrollIntoView();
     const video1 = document.getElementById('video1');
     video1.play()  
+    video1.requestFullscreen();
     }
 
 // detect end of video 1, scroll to section-video2 and play video2 
@@ -14,6 +15,8 @@ video1.addEventListener('ended', function() {
     const video2 = document.getElementById('video2');
     setTimeout(function(){
         video2.play();
+    video2.requestFullscreen();
+
     }, 500);    
 
 
@@ -28,6 +31,8 @@ video2.addEventListener('ended', function() {
     const video3 = document.getElementById('video3');
     setTimeout(function(){
         video3.play();
+    video3.requestFullscreen();
+
     }, 500);    
 
 
@@ -42,6 +47,8 @@ video3.addEventListener('ended', function() {
     const video4 = document.getElementById('video4');
     setTimeout(function(){
         video4.play();
+    video4.requestFullscreen();
+
     }, 500);    
 
 
