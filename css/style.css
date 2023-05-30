@@ -1,16 +1,30 @@
-:root{
-    --font:sans-serif;
-    --background:black;
-    --color:white;
+
+@font-face {
+    font-family: 'Merchant Copy Wide';
+    src: url('../font/MerchantCopyWide.eot');
+    src: url('../font/MerchantCopyWide.eot?#iefix') format('embedded-opentype'),
+        url('../font/MerchantCopyWide.woff2') format('woff2'),
+        url('../font/MerchantCopyWide.woff') format('woff'),
+        url('../font/MerchantCopyWide.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
+
+:root{
+    --font:serif;
+    --background:rgb(255, 245, 234);
+    --color:rgb(0, 0, 0);
+}
+
 * {
     scroll-behavior: smooth;
+    font-family: 'Merchant Copy Wide' !important;
+
 }
 
 body {
-    font-family: var(--font);
     background: var(--background);
-
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -31,7 +45,8 @@ h1 {
     width: 80%;
     margin-top: 1rem;
     margin-bottom: 2rem;
-    font-size: 3rem;
+    font-size: 1rem;
+    font-family: 'Merchant Copy Wide';
 }
 
 p {
@@ -39,7 +54,10 @@ p {
     text-align: center;
     width : 80%;
     max-width: 80%;
+    font-size: 0.9rem;
 }
+    
+
 
 button {
     background: var(--color);
@@ -58,7 +76,7 @@ video {
 }
 
 img {
-    width: 5rem;
-    height: 5rem;
+    width: 17rem;
+    height: 17rem;
     background-color: var(--background);
 }
