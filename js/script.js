@@ -18,25 +18,31 @@ video1.addEventListener('ended', function() {
         /* IE11 */
         video1.msExitFullscreen();
       }
+    // document.exitFullscreen();
     console.log('video1 ended');
     document.getElementById('section-video2').scrollIntoView();
     const video2 = document.getElementById('video2');
     setTimeout(function(){
         video2.play();
     video2.requestFullscreen();
-
     }, 500);    
-
-
     }
 );
 
 // detect end of video 2, scroll to section-video3 and play video3
 const video2 = document.getElementById('video2');
 video2.addEventListener('ended', function() {
-    this.webkitExitFullscreen();
-    this.exitFullscreen();
-    this.msExitFullscreen();
+    if (video2.exitFullscreen) {
+        video2.exitFullscreen();
+      } else if (video2.webkitExitFullscreen) {
+        /* Safari */
+        video2.webkitExitFullscreen();
+      } else if (video2.msExitFullscreen) {
+        /* IE11 */
+        video2.msExitFullscreen();
+      }
+    //   document.exitFullscreen();
+    console.log('video2 ended');
     document.getElementById('section-video3').scrollIntoView();
     const video3 = document.getElementById('video3');
     setTimeout(function(){
@@ -49,21 +55,68 @@ video2.addEventListener('ended', function() {
     }
 );
 
-// detect end of video 3, scroll to section-video4 and play video4
+// detect end of video 3, scroll to section-video4 and play video2 
 const video3 = document.getElementById('video3');
 video3.addEventListener('ended', function() {
-    this.webkitExitFullscreen();
-    this.exitFullscreen();
-    this.msExitFullscreen();
-    document.getElementById('section-video4').scrollIntoView();
-    const video4 = document.getElementById('video4');
-    setTimeout(function(){
-        video4.play();
-        video4.requestFullscreen();
+    if (video3.exitFullscreen) {
+        video3.exitFullscreen();
+      } else if (video3.webkitExitFullscreen) {
+        /* Safari */
+        video3.webkitExitFullscreen();
+      } else if (video2.msExitFullscreen) {
+        /* IE11 */
+        video3.msExitFullscreen();
+      }
+    //   document.exitFullscreen();
+    console.log('video3 ended');
+    // document.getElementById('section-vide3').scrollIntoView();
+    // const video3 = document.getElementById('video3');
+    // setTimeout(function(){
+    //     video3.play();
+    // video3.requestFullscreen();
 
-    }, 500);    
+    // }, 500);    
 
 
     }
 );
+
+
+
+// // detect end of video 2, scroll to section-video3 and play video3
+// const video2 = document.getElementById('video2');
+// video2.addEventListener('ended', function() {
+//     console.log('video2 ended')
+//     this.webkitExitFullscreen();
+//     this.exitFullscreen();
+//     this.msExitFullscreen();
+//     document.getElementById('section-video3').scrollIntoView();
+//     const video3 = document.getElementById('video3');
+//     setTimeout(function(){
+//         video3.play();
+//     video3.requestFullscreen();
+
+//     }, 500);    
+
+
+//     }
+// );
+
+// // detect end of video 3, scroll to section-video4 and play video4
+// const video3 = document.getElementById('video3');
+// video3.addEventListener('ended', function() {
+//     this.webkitExitFullscreen();
+//     this.exitFullscreen();
+//     this.msExitFullscreen();
+//     document.getElementById('section-video4').scrollIntoView();
+//     const video4 = document.getElementById('video4');
+//     setTimeout(function(){
+//         video4.play();
+//         video4.requestFullscreen();
+
+//     }, 500);    
+
+
+//     }
+// );
 
